@@ -1,6 +1,6 @@
-<div align="center">
-
-<img src="assets/images/ban.png" alt="HAVEN — Your Life, Visualized" width="100%">
+<p align="center">
+  <img src="./assets/images/ban.png" alt="HAVEN — Your Life, Visualized" width="100%">
+</p>
 
 <br>
 
