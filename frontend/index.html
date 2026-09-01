@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="HAVEN — a personal space for learning, creating, resetting and reflecting."
+    >
+
+    <title>HAVEN — Your Day, In Motion</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         INTRO
+         ================================================== -->
+
+    <div class="intro" id="intro">
+
+        <div class="intro-mark">H</div>
+
+        <p>YOUR PERSONAL SPACE</p>
+
+        <h1>
+            Make today
+            <em>matter.</em>
+        </h1>
+
+        <button id="enterHaven">
+            Enter HAVEN
+            <span>↗</span>
+        </button>
+
+    </div>
+
+
+    <!-- ==================================================
+         MAIN APP
+         ================================================== -->
+
+    <div class="app" id="app">
+
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <a class="brand" href="#">
+                <span>H</span>
+                HAVEN
+            </a>
+
+            <div class="today">
+
+                <strong id="clock">
+                    00:00
+                </strong>
+
+                <span id="todayDate">
+                    MONDAY · AUGUST 31
+                </span>
+
+            </div>
+
+            <div class="status">
+
+                <i></i>
+
+                YOUR DAY IS OPEN
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             HERO
+             ================================================== -->
+
+        <main>
+
+
+            <section class="hero">
+
+                <div class="hero-copy">
+
+                    <span class="eyebrow">
+                        HAVEN / TODAY
+                    </span>
+
+                    <h1>
+                        What do you
+                        <em>want to do?</em>
+                    </h1>
+
+                    <p>
+                        Don't organize your life.
+                        Give your attention somewhere meaningful.
+                    </p>
+
+                </div>
+
+
+                <div class="day-orbit">
+
+                    <div class="orbit orbit-one"></div>
+
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="day-core">
+
+                        <span>TODAY</span>
+
+                        <strong id="dayScore">
+                            0
+                        </strong>
+
+                        <small>
+                            MOMENTS
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        <!-- =====================================================
+     TODAY — DAILY LIFE TRACKER
+     ===================================================== -->
+
+<section class="today-section" id="today">
+
+    <div class="today-intro">
+        <span class="eyebrow">01 · TODAY</span>
+
+        <h2>
+            Give your day<br>
+            <em>some shape.</em>
+        </h2>
+
+        <p>
+            Small things count. Add what matters today
+            and watch your world move forward.
+        </p>
+    </div>
+
+
+    <div class="today-board">
+
+        <div class="today-top">
+
+            <div>
+                <span class="board-label">TODAY'S PROGRESS</span>
+
+                <div class="progress-number">
+                    <strong id="todayPercent">0</strong>
+                    <span>%</span>
+                </div>
+            </div>
+
+            <div class="progress-orbit">
+                <div class="progress-ring">
+                    <span id="todayRing">0%</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="progress-line">
+            <span id="todayProgressBar"></span>
+        </div>
+
+
+        <div class="task-header">
+
+            <div>
+                <span class="board-label">YOUR LIST</span>
+                <p id="taskSummary">Nothing planned yet.</p>
+            </div>
+
+            <button
+                class="clear-tasks"
+                id="clearTasks"
+                type="button">
+                Clear
+            </button>
+
+        </div>
+
+
+        <div
+            class="task-list"
+            id="taskList">
+        </div>
+
+
+        <form
+            class="task-form"
+            id="taskForm">
+
+            <input
+                id="taskInput"
+                type="text"
+                maxlength="100"
+                placeholder="What would make today better?"
+                autocomplete="off"
+                required>
+
+            <button
+                type="submit"
+                aria-label="Add task">
+                +
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+ <!-- =====================================================
+     MOOD — HOW ARE YOU TODAY?
+     ===================================================== -->
+
+<section class="mood-section" id="mood">
+
+    <div class="mood-copy">
+
+        <span class="eyebrow">
+            02 · CHECK IN
+        </span>
+
+        <h2>
+            How are you<br>
+            <em>really feeling?</em>
+        </h2>
+
+        <p>
+            There is no right answer. Choose what feels
+            closest to you right now.
+        </p>
+
+    </div>
+
+
+    <div class="mood-world">
+
+        <div class="mood-orbit"></div>
+
+        <div class="mood-center">
+
+            <span id="moodGreeting">
+                CHECK IN
+            </span>
+
+            <strong id="moodResult">
+                How are you?
+            </strong>
+
+            <small id="moodAdvice">
+                Choose a feeling below.
+            </small>
+
+        </div>
+
+
+        <button
+            class="mood-choice mood-calm"
+            data-mood="calm"
+            type="button">
+
+            <span>○</span>
+            Calm
+
+        </button>
+
+
+        <button
+            class="mood-choice mood-focused"
+            data-mood="focused"
+            type="button">
+
+            <span>◇</span>
+            Focused
+
+        </button>
+
+
+        <button
+            class="mood-choice mood-happy"
+            data-mood="happy"
+            type="button">
+
+            <span>✦</span>
+            Happy
+
+        </button>
+
+
+        <button
+            class="mood-choice mood-tired"
+            data-mood="tired"
+            type="button">
+
+            <span>—</span>
+            Tired
+
+        </button>
+
+
+        <button
+            class="mood-choice mood-stressed"
+            data-mood="stressed"
+            type="button">
+
+            <span>~</span>
+            Stressed
+
+        </button>
+
+
+        <button
+            class="mood-choice mood-energized"
+            data-mood="energized"
+            type="button">
+
+            <span>+</span>
+            Energized
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FOCUS ROOM — DEEP WORK
+     ===================================================== -->
+
+<section class="focus-section" id="focus">
+
+    <div class="focus-copy">
+
+        <span class="eyebrow">
+            03 · FOCUS ROOM
+        </span>
+
+        <h2>
+            Give one thing<br>
+            your <em>full attention.</em>
+        </h2>
+
+        <p>
+            Choose one thing. Remove the noise.
+            HAVEN will keep the time for you.
+        </p>
+
+        <div class="focus-note">
+            <span>FOCUS SESSIONS</span>
+            <strong id="focusSessions">0</strong>
+        </div>
+
+    </div>
+
+
+    <div class="focus-room">
+
+        <div class="focus-orbit"></div>
+
+        <div class="focus-timer">
+
+            <span id="focusStatus">
+                READY
+            </span>
+
+            <strong id="focusTime">
+                25:00
+            </strong>
+
+            <small>
+                MINUTE FOCUS
+            </small>
+
+        </div>
+
+
+        <div class="focus-controls">
+
+            <input
+                id="focusTask"
+                type="text"
+                maxlength="80"
+                placeholder="What are you focusing on?"
+                autocomplete="off">
+
+            <div class="focus-buttons">
+
+                <button
+                    id="focusStart"
+                    type="button">
+                    Start focus
+                </button>
+
+                <button
+                    id="focusPause"
+                    type="button">
+                    Pause
+                </button>
+
+                <button
+                    id="focusReset"
+                    type="button">
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     GROW WHAT MATTERS
+     ===================================================== -->
+
+<section class="habit-section" id="habits">
+
+    <div class="habit-intro">
+
+        <span class="eyebrow">04 · YOUR LITTLE GARDEN</span>
+
+        <h2>
+            Grow what<br>
+            <em>matters.</em>
+        </h2>
+
+        <p>
+            Choose a few things that deserve your attention
+            today. Small actions become visible progress.
+        </p>
+
+    </div>
+
+
+    <div class="garden-dashboard">
+
+
+        <!-- =============================================
+             LEFT — TODAY'S FOCUS
+             ============================================= -->
+
+        <div class="garden-focus">
+
+            <div class="focus-top">
+
+                <span>TODAY'S FOCUS</span>
+
+                <span id="focusDate">
+                    TODAY
+                </span>
+
+            </div>
+
+
+            <h3>
+                What would make
+                <em>today feel good?</em>
+            </h3>
+
+
+            <div class="focus-input">
+
+                <input
+                    type="text"
+                    id="habitInput"
+                    placeholder="Add something small..."
+                    maxlength="45"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="addHabitButton"
+                    type="button"
+                    aria-label="Add habit">
+                    +
+                </button>
+
+            </div>
+
+
+            <div
+                class="habit-list"
+                id="habitList">
+
+                <!-- JavaScript adds habits here -->
+
+            </div>
+
+
+            <div class="focus-footer">
+
+                <span id="habitMessage">
+                    One small thing is enough.
+                </span>
+
+                <strong>
+                    <span id="habitCompleted">0</span>
+                    completed
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =============================================
+             RIGHT — LIVING GARDEN
+             ============================================= -->
+
+        <div class="garden-world">
+
+
+            <!-- SKY -->
+
+            <div class="garden-sky">
+
+                <div class="garden-sun">
+                    <span></span>
+                </div>
+
+                <div class="cloud cloud-one"></div>
+
+                <div class="cloud cloud-two"></div>
+
+                <span class="spark spark-one">✦</span>
+
+                <span class="spark spark-two">✦</span>
+
+                <span class="spark spark-three">·</span>
+
+            </div>
+
+
+            <!-- GROUND -->
+
+            <div class="garden-ground">
+
+                <div class="garden-path"></div>
+
+
+                <div class="garden-stones">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <!-- Plant 1 -->
+
+                <div class="garden-plant plant-a">
+
+                    <div class="plant-flower">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <b></b>
+                    </div>
+
+                    <div class="plant-stem"></div>
+
+                    <div class="plant-leaf leaf-a"></div>
+
+                    <div class="plant-leaf leaf-b"></div>
+
+                </div>
+
+
+                <!-- Plant 2 -->
+
+                <div class="garden-plant plant-b">
+
+                    <div class="plant-flower">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <b></b>
+                    </div>
+
+                    <div class="plant-stem"></div>
+
+                    <div class="plant-leaf leaf-a"></div>
+
+                    <div class="plant-leaf leaf-b"></div>
+
+                </div>
+
+
+                <!-- Plant 3 -->
+
+                <div class="garden-plant plant-c">
+
+                    <div class="plant-flower">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <b></b>
+                    </div>
+
+                    <div class="plant-stem"></div>
+
+                    <div class="plant-leaf leaf-a"></div>
+
+                    <div class="plant-leaf leaf-b"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="garden-caption">
+
+                <div class="garden-progress">
+
+                    <svg viewBox="0 0 80 80">
+
+                        <circle
+                            class="progress-track"
+                            cx="40"
+                            cy="40"
+                            r="34">
+                        </circle>
+
+                        <circle
+                            class="progress-fill"
+                            id="gardenProgress"
+                            cx="40"
+                            cy="40"
+                            r="34">
+                        </circle>
+
+                    </svg>
+
+                    <span id="gardenPercent">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="garden-progress-copy">
+
+                    <span id="gardenMood">
+                        A quiet beginning.
+                    </span>
+
+                    <strong>
+
+                        <span id="gardenCount">
+                            0
+                        </span>
+
+                        little things growing
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =============================================
+         DAILY REFLECTION
+         ============================================= -->
+
+    <div class="garden-reflection">
+
+        <span>BEFORE YOU LEAVE</span>
+
+        <p>
+            What is one thing you want to feel
+            proud of tonight?
+        </p>
+
+        <div class="reflection-input">
+
+            <input
+                type="text"
+                id="reflectionInput"
+                placeholder="Leave yourself a little note..."
+                maxlength="100"
+            >
+
+            <button
+                id="saveReflection"
+                type="button">
+                Save
+            </button>
+
+        </div>
+
+        <div
+            class="reflection-result"
+            id="reflectionResult">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     YOUR TRACE — SMALL THINGS COUNT
+     ===================================================== -->
+
+<section class="trace-section" id="traceSection">
+
+    <div class="trace-intro">
+
+        <span class="trace-kicker">
+            YOUR TRACE · 05
+        </span>
+
+        <h2>
+            Small things<br>
+            <em>count.</em>
+        </h2>
+
+        <p>
+            A quiet record of the things you did,
+            noticed, learned and created.
+        </p>
+
+    </div>
+
+
+    <div class="trace-layout">
+
+
+        <!-- =============================================
+             LEFT — ADD A MOMENT
+             ============================================= -->
+
+        <div class="trace-create">
+
+            <div class="trace-create-heading">
+
+                <span>
+                    LEAVE A TRACE
+                </span>
+
+                <strong>
+                    What happened today?
+                </strong>
+
+            </div>
+
+
+            <textarea
+                id="traceInput"
+                maxlength="100"
+                placeholder="I finally understood..."
+            ></textarea>
+
+
+            <div class="trace-types">
+
+                <button
+                    type="button"
+                    class="trace-type active"
+                    data-type="noticed">
+
+                    <span>○</span>
+                    Noticed
+
+                </button>
+
+                <button
+                    type="button"
+                    class="trace-type"
+                    data-type="learned">
+
+                    <span>✦</span>
+                    Learned
+
+                </button>
+
+                <button
+                    type="button"
+                    class="trace-type"
+                    data-type="created">
+
+                    <span>△</span>
+                    Created
+
+                </button>
+
+                <button
+                    type="button"
+                    class="trace-type"
+                    data-type="cared">
+
+                    <span>♡</span>
+                    Cared
+
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="saveTrace"
+                class="trace-save">
+
+                Leave this trace
+
+                <span>↗</span>
+
+            </button>
+
+
+            <small class="trace-hint">
+                Nothing has to be impressive.
+                It just has to be yours.
+            </small>
+
+        </div>
+
+
+        <!-- =============================================
+             RIGHT — MEMORY CONSTELLATION
+             ============================================= -->
+
+        <div class="trace-wall">
+
+            <div class="trace-wall-top">
+
+                <div>
+
+                    <span>
+                        TODAY
+                    </span>
+
+                    <strong>
+                        Your little constellation
+                    </strong>
+
+                </div>
+
+
+                <div class="trace-counter">
+
+                    <strong id="traceCount">
+                        0
+                    </strong>
+
+                    <span>
+                        traces
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="trace-memories"
+                id="traceMemories">
+
+                <!-- Memories appear here -->
+
+            </div>
+
+
+            <div
+                class="trace-empty"
+                id="traceEmpty">
+
+                <div class="empty-orbit">
+
+                    <span>✦</span>
+
+                </div>
+
+                <strong>
+                    Your day is still unwritten.
+                </strong>
+
+                <p>
+                    Leave one small trace above
+                    and watch your constellation begin.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =============================================
+         DAILY SIGNAL
+         ============================================= -->
+
+    <div class="trace-signal">
+
+        <span>
+            TODAY'S SIGNAL
+        </span>
+
+        <strong id="traceSignal">
+            A quiet beginning.
+        </strong>
+
+        <div class="signal-line">
+
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ==================================================
+             INTERACTION PANEL
+             ================================================== -->
+
+        <div
+            class="experience"
+            id="experience"
+        >
+
+            <button
+                class="experience-close"
+                id="closeExperience"
+            >
+                ×
+            </button>
+
+            <div
+                class="experience-inner"
+                id="experienceInner"
+            >
+
+                <!-- JS CONTENT -->
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                HAVEN
+            </span>
+
+            <p>
+                YOUR DAY, IN MOTION.
+            </p>
+
+            <span>
+                2026
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
