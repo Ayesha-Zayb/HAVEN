@@ -62,33 +62,33 @@ The development process focused on turning an initial concept into a functional,
 
 # Explore HAVEN
 
-### 01 · Knowledge
+###  · Knowledge
 
 A visual space for curiosity and learning.
 
 Explore topics, collect knowledge, and turn learning into something memorable.
 
-### 02 · Wellness
+###  · Wellness
 
 A calmer space for breathing, movement, and simple daily rituals.
 
-### 03 · Innovation
+###  · Innovation
 
 A structured space for moving ideas forward.
 
 **Define → Build → Test → Share**
 
-### 04 · Creativity
+###  · Creativity
 
 A visual garden for unfinished thoughts, inspiration, and ideas that deserve somewhere to grow.
 
-### 05 · Grow What Matters
+###  · Grow What Matters
 
 A personal habit space where small commitments become visible progress.
 
 Add habits, complete them, and watch your progress develop.
 
-### 06 · Small Things Count
+###  · Small Things Count
 
 A living memory wall for everyday moments.
 
